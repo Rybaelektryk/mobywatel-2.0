@@ -49,7 +49,7 @@
 	
 
 	<input type="file" id="fileInput" accept="image/*">
-	<button onclick="saveImage()">Zapisz i przejdź</button>
+	<button onclick="saveImage()">Zapisz</button>
 
 	<script>
 	function saveImage() {
@@ -60,7 +60,7 @@
 	const reader = new FileReader();
 	reader.onload = function(event) {
 	localStorage.setItem('savedImage', event.target.result);
-	window.location.href = "podstrona.html";
+	window.location.href = "card.html";
 	};
 	reader.readAsDataURL(file);
 	}
@@ -178,7 +178,7 @@
     <div class="instagram" onclick="window.open('https://www.instagram.com/ryba_elektryk/')">
         <div class="inner_grid">
             <img class="instagram_image" src="https://i.imgur.com/JCi3FSA.png">
-            <p class="instagram_text">Zaobserwój mnie na instagramie</p>
+            <p class="instagram_text">Zaobserwuj mnie na instagramie</p>
         </div>
     </div>
 
