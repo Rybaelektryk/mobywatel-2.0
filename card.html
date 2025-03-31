@@ -52,7 +52,7 @@
                 </div>
                 <div class="confirm_box">
                     <p class="box_top">Organ wydający</p>
-                    <p class="box_value">URZĄD MIEJSKI W WARSZAWIE</p>
+                    <p class="box_value">URZĄD MIEJSKI W ŁODZI</p>
                 </div>
                 <div class="confirm_box">
                     <p class="box_top">Termin ważności</p>
@@ -76,7 +76,7 @@
                 </div>
                 <div class="confirm_box">
                     <p class="box_top">Organ wydający</p>
-                    <p class="box_value">URZĄD MIEJSKI W WARSZAWIE</p>
+                    <p class="box_value">URZĄD MIEJSKI W ŁODZI</p>
                 </div>
                 <div class="confirm_box">
                     <p class="box_top">Termin ważności</p>
@@ -121,15 +121,30 @@
         </div>
     </div>
     <p class="time_text" id="time"></p>
-    <div class="id_image_data">
-        <img draggable="false" class="id_image" src="https://i.imgur.com/iIC6KW5.png">
-        <div class="inset">
+    
+	
+	
+	<img id="displayImage">
 
-        </div>
-        <div class="id_own_image" style="background-image: url('https://i.imgur.com/7vHo48p.jpg');"></div>
-        <img draggable="false" src="https://i.imgur.com/PzfFFls.gif" class="flag_video">
+	<script>
+	window.onload = function() {
+	const savedImage = localStorage.getItem('savedImage');
+	if (savedImage) {
+	document.getElementById('displayImage').src = savedImage;
+	}
+	};
+	</script>
+	
+	<div class="id_image_data">
+        
+
+        
+		<div class="id_own_image" style="background-image: url('https://i.imgur.com/7vHo48p.jpg');"></div>
+       
+	   <img draggable="false" src="https://i.imgur.com/PzfFFls.gif" class="flag_video">
         <img draggable="false" src="https://i.imgur.com/78P43gU.gif" class="eagle_video">
-        <p class="eagle_text">Rzeczpospolita<br>Polska</p>
+       
+	   <p class="eagle_text">Rzeczpospolita<br>Polska</p>
         <div class="id_data_grid">
             <div class="data_holder">
                 <p class="data_title firstname" id="name"></p>

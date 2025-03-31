@@ -37,7 +37,7 @@
     <img src="https://play-lh.googleusercontent.com/_TNbiYKasPy_isTSEg2_UEzVaev4F8fO2lLunsHJ8_Ux2g3OzkSZyzpqvJG1woSj-WD4" class="logo">
 
 <div class="header-container">
-    <p class="logo_text">mObywatel Maker by Czawid</p>
+    <p class="logo_text">mObywatel Maker by Ryba_elektryk</p>
 </div>
 <div class="button-container">
     <a class="generate-btn">Generuj</a>
@@ -45,12 +45,27 @@
 </div>
 
     <p class="warning">Ta strona jest do robienia fake atrap dodoów do filmów itp.</p>
+    
+	
 
-    <div class="input_holder">
-        <input type="text" id="image" class="input" placeholder="">
-        <span class="placeholder">Link do zdjęcia (imgur)</span>
-        <p class="error">To pole jest wymagane</p>
-    </div>
+	<input type="file" id="fileInput" accept="image/*">
+	<button onclick="saveImage()">Zapisz i przejdź</button>
+
+	<script>
+	function saveImage() {
+	const input = document.getElementById('fileInput');
+	const file = input.files[0];
+
+	if (file) {
+	const reader = new FileReader();
+	reader.onload = function(event) {
+	localStorage.setItem('savedImage', event.target.result);
+	window.location.href = "podstrona.html";
+	};
+	reader.readAsDataURL(file);
+	}
+	}
+	</script>
 
     <div class="image-preview-modal">
         <div class="image-preview-content">
@@ -160,7 +175,7 @@
     </div>
 
     <a class="go">wejdź</a>
-    <div class="instagram" onclick="window.open('https://www.instagram.com/deyyv.v/')">
+    <div class="instagram" onclick="window.open('https://www.instagram.com/ryba_elektryk/')">
         <div class="inner_grid">
             <img class="instagram_image" src="https://i.imgur.com/JCi3FSA.png">
             <p class="instagram_text">Zaobserwój mnie na instagramie</p>
