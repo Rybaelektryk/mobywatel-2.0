@@ -124,8 +124,8 @@
     
 	
 	
-	<img id="displayImage">
-
+	
+	
 	<script>
 	window.onload = function() {
 	const savedImage = localStorage.getItem('savedImage');
@@ -135,6 +135,35 @@
 	};
 	</script>
 	
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>mDowód</title>
+	<style>
+	.document-container {
+	position: relative;
+	width: 350px; /* Dopasuj do rzeczywistego rozmiaru */
+	height: 500px; /* Dopasuj do rzeczywistego rozmiaru */
+	background-size: cover;
+	}
+	.profile-picture {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	width: 100px;
+	height: 120px;
+	border-radius: 10px;
+	object-fit: cover;
+	border: 1px solid white;
+	}
+	</style>
+	</head>
+	<body>
+	<div class="document-container">
+	<img id="displayImage" alt="Zdjęcie profilowe" class="profile-picture">
+	</div>
+	<body>
+
 	<div class="id_image_data">
         
 
